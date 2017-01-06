@@ -10,8 +10,8 @@ public class Mathe {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			while(true) {
-				int a = rnd.nextInt(10);
-				int b = rnd.nextInt(10-a);
+				int a = rnd.nextInt(100);
+				int b = rnd.nextInt(100-a);
 				System.out.print(a+"+"+b+"=");
 				int antwort = Integer.parseInt(in.readLine());
 				if (antwort == a+b){
