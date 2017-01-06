@@ -11,14 +11,18 @@ public class Mathe {
 		try {
 			while(true) {
 				int a = rnd.nextInt(100);
-				int b = rnd.nextInt(100-a);
-				System.out.print(a+"+"+b+"=");
-				int antwort = Integer.parseInt(in.readLine());
-				if (antwort == a+b){
-					System.out.println(":-)");
-				}else{
-					System.out.println("/-(");
+				int b = rnd.nextInt(a);
+				int antwort = 0;
+				
+				while(true) {
+					System.out.print(a+"-"+b+"=");
+					antwort = Integer.parseInt(in.readLine());
+					if (antwort == a-b)
+						break;
+					else
+						System.out.println("/-(");
 				}
+				System.out.println(":-)");
 			}
 		} catch (NumberFormatException | IOException e) {
 			e.printStackTrace();
